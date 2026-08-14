@@ -7,3 +7,48 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+/* ========= estilos generales ====== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ========= navegación ====== */
+
+.navbar {
+    padding: 1rem 0;
+}
+
+/* ========= secciones ====== */
+
+section {
+    padding: 5rem 0;
+}
+
+/* ========= proyectos ====== */
+
+.project-card {
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-type {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+    border-radius: 0.25rem;
+}
+
+.technology-tag {
+    display: inline-block;
+    margin: 0.2rem;
+    padding: 0.35rem 0.6rem;
+    border-radius: 0.25rem;
+    font-size: 0.85rem;
+}
