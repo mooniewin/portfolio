@@ -1,37 +1,42 @@
-<div class="card project-card h-100">
+{{-- muestra la información resumida de un proyecto --}}
 
-    <img src="{{ $image }}" class="card-img-top" alt="{{ $title }}" >
+<div class="project-card">
 
-    <div class="card-body">
+    <div class="project-image">
+        <span>
+            {{ $title }}
+        </span>
+    </div>
+
+    <div class="project-content">
 
         <span class="project-type">
             {{ $type }}
         </span>
 
-        <h3 class="card-title mt-2">
+        <h3>
             {{ $title }}
         </h3>
 
-        <p class="card-text">
+        <p>
             {{ $description }}
         </p>
 
-        @if (!empty($role))
-            <p class="project-role">
-                <strong>Rol:</strong> {{ $role }}
-            </p>
+        @if ($role)
+            <span class="project-role">
+                Rol: {{ $role }}
+            </span>
         @endif
 
-        <div class="project-technologies">
-            @foreach ($technologies as $technology)
-                <span class="technology-tag">
-                    {{ $technology }}
-                </span>
-            @endforeach
-        </div>
+        <span class="project-technologies">
+            {{ $technologies }}
+        </span>
 
-        <a href="{{ $url }}" class="btn btn-primary mt-3">
-            Ver proyecto
+        <a
+            href="#"
+            class="project-link"
+        >
+            Ver proyecto →
         </a>
 
     </div>

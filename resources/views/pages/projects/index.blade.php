@@ -7,12 +7,8 @@
         <div class="container">
 
             <h1>
-                Experiencia profesional
+                Proyectos
             </h1>
-
-            <p>
-                Página de experiencia del proyecto SaaS.
-            </p>
 
         </div>
 

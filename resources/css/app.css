@@ -1,54 +1,488 @@
-@import 'tailwindcss';
-
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-}
 /* ========= estilos generales ====== */
+
+:root {
+    --color-primary: #8b5cf6;
+    --color-primary-dark: #7c3aed;
+    --color-secondary: #f5f3ff;
+    --color-text: #25232a;
+    --color-text-light: #6b6872;
+    --color-border: #e5e1eb;
+    --color-white: #ffffff;
+}
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-white);
+}
+
+.btn-portfolio {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 0.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.btn-portfolio:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: var(--color-white);
+}
+
+.btn-portfolio-outline {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.btn-portfolio-outline:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 /* ========= navegación ====== */
 
-.navbar {
-    padding: 1rem 0;
+.portfolio-navbar {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-white);
 }
 
-/* ========= secciones ====== */
+.portfolio-navbar .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
 
-section {
-    padding: 5rem 0;
+.portfolio-navbar .nav-link {
+    margin: 0 0.5rem;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.portfolio-navbar .nav-link:hover {
+    color: var(--color-primary);
+}
+
+.portfolio-contact-button {
+    padding: 0.6rem 1.25rem;
+}
+
+/* ========= hero ====== */
+
+.hero-section {
+    padding: 7rem 0;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-label {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--color-primary-dark);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+}
+
+.hero-title {
+    margin-bottom: 1.5rem;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.hero-description {
+    max-width: 650px;
+    margin-bottom: 2rem;
+    color: var(--color-text-light);
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-decoration {
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    position: relative;
+}
+
+.hero-decoration span {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: 70px;
+    left: 70px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    opacity: 0.75;
+}
+.hero-decoration {
+    width: 320px !important;
+    height: 320px !important;
+    min-height: 320px !important;
+    background-color: purple !important;
+}
+
+/* ========= secciones generales ====== */
+
+.portfolio-section {
+    padding: 6rem 0;
+}
+
+.section-heading {
+    margin-bottom: 3rem;
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    color: var(--color-primary-dark);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+}
+
+/* ========= experiencia ====== */
+
+.experience-section {
+    background-color: var(--color-secondary);
+}
+
+.experience-image {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background-color: var(--color-white);
+}
+
+.experience-image span {
+    color: var(--color-text-light);
+}
+
+.experience-type {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--color-primary-dark);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.experience-section h3 {
+    margin-bottom: 1.25rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.experience-description {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+.experience-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.experience-technologies span {
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.4rem;
+    background-color: var(--color-white);
+    color: var(--color-primary-dark);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.experience-features {
+    margin-bottom: 1.5rem;
+    padding-left: 1.25rem;
+}
+
+.experience-features li {
+    margin-bottom: 0.5rem;
+}
+
+/* ========= sobre mí ====== */
+
+.about-section {
+    background-color: var(--color-white);
+}
+
+.about-content {
+    color: var(--color-text-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========= tecnologías ====== */
+
+.technologies-section {
+    background-color: var(--color-secondary);
+}
+
+.technology-card {
+    height: 100%;
+    padding: 1.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background-color: var(--color-white);
+}
+
+.technology-card h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.technology-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.technology-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-text-light);
+}
+
+.technology-icon {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    background-color: var(--color-secondary);
+    color: var(--color-primary-dark);
+    font-size: 0.65rem;
+    font-weight: 700;
 }
 
 /* ========= proyectos ====== */
 
-.project-card {
-    overflow: hidden;
+.projects-section {
+    background-color: var(--color-white);
 }
 
-.project-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+.projects-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.projects-link {
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.projects-link:hover {
+    text-decoration: underline;
+}
+
+.project-card {
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background-color: var(--color-white);
+}
+
+.project-image {
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secondary);
+    color: var(--color-primary-dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.project-content {
+    padding: 1.75rem;
 }
 
 .project-type {
     display: inline-block;
-    padding: 0.35rem 0.75rem;
-    font-size: 0.85rem;
-    border-radius: 0.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-primary-dark);
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 
-.technology-tag {
-    display: inline-block;
-    margin: 0.2rem;
-    padding: 0.35rem 0.6rem;
-    border-radius: 0.25rem;
-    font-size: 0.85rem;
+.project-content h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
+
+.project-content p {
+    margin-bottom: 1rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.project-role,
+.project-technologies {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* ========= controles del carrusel ====== */
+
+.projects-section .carousel-control-prev,
+.projects-section .carousel-control-next {
+    width: 3rem;
+    height: 3rem;
+    top: 50%;
+    margin-top: -1.5rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    opacity: 1;
+}
+
+.projects-section .carousel-control-prev {
+    left: -4rem;
+}
+
+.projects-section .carousel-control-next {
+    right: -4rem;
+}
+
+/* ========= contacto ====== */
+
+.contact-section {
+    background-color: var(--color-secondary);
+}
+
+.contact-section h2 {
+    margin-bottom: 1.25rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+}
+
+.contact-description {
+    max-width: 650px;
+    margin: 0 auto 2rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+/* ========= footer ====== */
+
+.portfolio-footer {
+    padding: 4rem 0 1.5rem;
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-brand {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.portfolio-footer p {
+    color: var(--color-text-light);
+}
+
+.portfolio-footer h3 {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+}
+
+.footer-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--color-text-light);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary-dark);
+}
+
+.footer-bottom {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-light);
+    font-size: 0.85rem;
+}   

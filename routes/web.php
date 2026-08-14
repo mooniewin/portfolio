@@ -8,8 +8,8 @@ Route::get('/', function () {
 
 Route::get('/projects', function () {
     return view('pages.projects.index');
-});
+})->name('projects.index');
 
-Route::get('/experiencia/saas', function () {
-    return view('pages.experiencia.saas');
-});
+Route::get('/experience/saas', function () {
+    return view('pages.experience.saas');
+})->name('experience.saas');

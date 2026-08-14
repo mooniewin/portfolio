@@ -1,22 +1,25 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg portfolio-navbar">
     <div class="container">
 
         <a class="navbar-brand" href="{{ url('/') }}">
-            Montserrat Martínez
+            moon.dev
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Mostrar navegación">
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Mostrar navegación"
+        >
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav ms-auto">
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">
-                        Inicio
-                    </a>
-                </li>
+            <ul class="navbar-nav mx-auto">
 
                 <li class="nav-item">
                     <a class="nav-link" href="#experiencia">
@@ -32,7 +35,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link" href="#tecnologias">
-                        Stack
+                        Tecnologías
                     </a>
                 </li>
 
@@ -42,13 +45,14 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#contacto">
-                        Contacto
-                    </a>
-                </li>
-
             </ul>
+
+            <a
+                href="#contacto"
+                class="btn btn-primary portfolio-contact-button"
+            >
+                Contacto
+            </a>
 
         </div>
 
