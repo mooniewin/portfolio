@@ -47,10 +47,7 @@
 
             </ul>
 
-            <a
-                href="#contacto"
-                class="btn btn-primary portfolio-contact-button"
-            >
+            <a href="#contacto" class="btn-portfolio">
                 Contacto
             </a>
 

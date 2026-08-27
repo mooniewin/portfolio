@@ -1,12 +1,12 @@
 /* ========= estilos generales ====== */
 
 :root {
-    --color-primary: #8b5cf6;
-    --color-primary-dark: #7c3aed;
-    --color-secondary: #f5f3ff;
+    --color-primary: #5B419A;
+    --color-primary-dark: #8262D9;
+    --color-secondary: #FAF8FC;
     --color-text: #25232a;
     --color-text-light: #6b6872;
-    --color-border: #e5e1eb;
+    --color-border: #EFEAF7;
     --color-white: #ffffff;
 }
 
@@ -14,39 +14,47 @@ body {
     margin: 0;
     color: var(--color-text);
     background-color: var(--color-white);
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .btn-portfolio {
     padding: 0.75rem 1.5rem;
     border: 1px solid var(--color-primary);
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     background-color: var(--color-primary);
     color: var(--color-white);
     font-weight: 600;
     text-decoration: none;
-    transition: 0.2s ease;
+    margin-left: 0.4rem;
+    transition: transform 0.2s ease;
 }
 
 .btn-portfolio:hover {
     background-color: var(--color-primary-dark);
     border-color: var(--color-primary-dark);
     color: var(--color-white);
+    transform: translateX(5px);
 }
 
 .btn-portfolio-outline {
     padding: 0.75rem 1.5rem;
     border: 1px solid var(--color-primary);
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     background-color: transparent;
     color: var(--color-primary-dark);
     font-weight: 600;
     text-decoration: none;
-    transition: 0.2s ease;
+    margin-left: 0.4rem;
+    transition: transform 0.2s ease;
 }
 
 .btn-portfolio-outline:hover {
     background-color: var(--color-primary);
     color: var(--color-white);
+    transform: translateX(5px);
 }
 
 /* ========= navegación ====== */
@@ -115,30 +123,51 @@ body {
     gap: 1rem;
 }
 
+/* ========= figura decorativa del hero ====== */
 .hero-decoration {
-    width: 320px;
-    height: 320px;
-    margin: 0 auto;
-    border-radius: 50%;
-    background-color: var(--color-secondary);
     position: relative;
+    width: 480px;
+    height: 480px;
+    background-color: #F2EDFC;
+    overflow: visible;
+    display: flex;
+    border-radius: 50%;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero-decoration span {
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    top: 70px;
-    left: 70px;
+.hero-shape{
+    position: relative;
+    width: 360px;
+    height: 360px; 
     border-radius: 50%;
-    background-color: var(--color-primary);
-    opacity: 0.75;
+    border-color: #F2EDFC;
+    background-color: #F2EDFC;
 }
-.hero-decoration {
-    width: 320px !important;
-    height: 320px !important;
-    min-height: 320px !important;
-    background-color: purple !important;
+
+.hero-shape::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 480px;
+    height:480px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at var(--x, 50%) var(--y, 50%),
+        rgb(218, 188, 246) 0%,
+        rgba(168, 85, 247, 0) 70%
+    );
+    pointer-events: none;
+}
+
+/* ========= responsive ====== */
+@media (max-width: 991.98px) {
+    .hero-decoration {
+        display: none;
+    }
 }
 
 /* ========= secciones generales ====== */
@@ -285,18 +314,47 @@ body {
     color: var(--color-text-light);
 }
 
+/* ========= iconos de tecnologías ====== */
+
 .technology-icon {
-    width: 2rem;
-    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
-    border-radius: 0.5rem;
-    background-color: var(--color-secondary);
+}
+
+
+/* ========= iconos svg ====== */
+
+.technology-icon-svg {
+    width: 35px;
+    height: 35px;
+    fill: currentColor;
+    color: var(--color-primary);
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* ========= iconos bootstrap ====== */
+
+.technology-icon-bootstrap {
+    font-size: 35px;
+    color: var(--color-primary);
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* ========= efecto hover ====== */
+
+.technology-item:hover .technology-icon-svg,
+.technology-item:hover .technology-icon-bootstrap {
     color: var(--color-primary-dark);
-    font-size: 0.65rem;
-    font-weight: 700;
+    transform: translateY(-4px);
 }
 
 /* ========= proyectos ====== */
@@ -385,6 +443,23 @@ body {
     text-decoration: underline;
 }
 
+/* ========= carrusel de proyectos ====== */
+
+.projects-section .carousel-inner {
+    padding: 0 4rem;
+}
+
+.projects-section .carousel-item {
+    min-height: 100%;
+}
+
+.project-slide {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
 /* ========= controles del carrusel ====== */
 
 .projects-section .carousel-control-prev,
@@ -399,11 +474,32 @@ body {
 }
 
 .projects-section .carousel-control-prev {
-    left: -4rem;
+    left: 0;
 }
 
 .projects-section .carousel-control-next {
-    right: -4rem;
+    right: 0;
+}
+
+
+/* ========= responsive ====== */
+
+@media (max-width: 767.98px) {
+
+    .projects-section .carousel-inner {
+        padding: 0 2.5rem;
+    }
+
+    .project-slide {
+        max-width: 100%;
+    }
+
+    .projects-section .carousel-control-prev,
+    .projects-section .carousel-control-next {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
 }
 
 /* ========= contacto ====== */

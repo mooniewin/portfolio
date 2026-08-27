@@ -1,9 +1,6 @@
 {{-- muestra un resumen de la experiencia profesional y enlaza a su detalle --}}
-
 <section id="experiencia" class="portfolio-section experience-section">
-
     <div class="container">
-
         <div class="section-heading">
             <span class="section-label">
                 EXPERIENCIA PROFESIONAL
@@ -15,17 +12,13 @@
         </div>
 
         <div class="row align-items-center g-5">
-
             <div class="col-lg-6">
-
                 <div class="experience-image">
                     <span>Captura del sistema SaaS</span>
                 </div>
-
             </div>
 
             <div class="col-lg-6">
-
                 <span class="experience-type">
                     Proyecto profesional · Estadías
                 </span>
@@ -41,42 +34,24 @@
                 </p>
 
                 <div class="experience-technologies">
-
                     <span>Laravel</span>
                     <span>PHP</span>
                     <span>MySQL</span>
                     <span>APIs</span>
                     <span>Webhooks</span>
-
                 </div>
 
                 <ul class="experience-features">
-
-                    <li>
-                        Integraciones con múltiples plataformas
-                    </li>
-
-                    <li>
-                        Procesamiento asíncrono
-                    </li>
-
-                    <li>
-                        Arquitectura basada en servicios
-                    </li>
-
+                    <li> Integraciones con múltiples plataformas </li>
+                    <li> Procesamiento asíncrono </li>
+                    <li> Arquitectura basada en servicios </li>
                 </ul>
 
-                <a
-                    href="{{ route('experience.saas')}}"
-                    class="btn-portfolio"
-                >
+                <a href="{{ route('experience.saas')}}" class="btn-portfolio" >
                     Ver experiencia
+                    <i class="bi bi-arrow-right"></i>
                 </a>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
