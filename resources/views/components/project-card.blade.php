@@ -3,9 +3,7 @@
 <div class="project-card">
 
     <div class="project-image">
-        <span>
-            {{ $title }}
-        </span>
+        <img src="{{ asset($image) }}" alt="Vista previa de {{ $title }}">
     </div>
 
     <div class="project-content">
@@ -31,13 +29,6 @@
         <span class="project-technologies">
             {{ $technologies }}
         </span>
-
-        <a
-            href="#"
-            class="project-link"
-        >
-            Ver proyecto →
-        </a>
 
     </div>
 

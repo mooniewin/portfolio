@@ -502,6 +502,336 @@ body {
 
 }
 
+/* ========= páginas de proyectos ====== */
+
+.project-detail-section {
+    padding: 6rem 0;
+}
+
+.project-detail-header {
+    max-width: 850px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.project-detail-label {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--color-primary-dark);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+
+.project-detail-title {
+    margin-bottom: 1.5rem;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.project-detail-description {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* ========= imagen de preview del proyecto ====== */
+
+.project-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background-color: var(--color-secondary);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* ========= efecto hover de preview ====== */
+
+.project-card:hover .project-image img {
+    transform: scale(1.03);
+}
+
+/* ========= información del proyecto ====== */
+
+.project-info-card {
+    height: 100%;
+}
+
+/* ========= tecnologías del proyecto ====== */
+
+.project-info-card .technology-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-info-card .technology-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* ========= información general ====== */
+
+.project-detail-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 3rem auto;
+    max-width: 900px;
+}
+
+.project-detail-item {
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background-color: var(--color-white);
+}
+
+.project-detail-item h2 {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+}
+
+.project-detail-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* ========= roles dentro de la ficha ====== */
+
+.project-detail-item .project-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.project-role {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid var(--color-border);
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.project-role-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.project-role.backend .project-role-dot {
+    background-color: #7B5BB6;
+}
+
+.project-role.frontend .project-role-dot {
+    background-color: #5B9BD5;
+}
+
+
+/* ========= bloques de información ====== */
+
+.project-detail-block {
+    max-width: 850px;
+    margin: 0 auto 3rem;
+}
+
+.project-detail-block h2 {
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.project-detail-block ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.project-detail-block li {
+    position: relative;
+    margin-bottom: 1rem;
+    padding-left: 1.75rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+.project-detail-block li::before {
+    content: "";
+    position: absolute;
+    top: 0.7rem;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+
+/* ========= cards de contribución ====== */
+
+.contribution-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background-color: var(--color-white);
+}
+
+.contribution-card h4 {
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.contribution-card ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.contribution-card li {
+    margin-bottom: 0.5rem;
+    color: var(--color-text-light);
+}
+
+/* ========= tecnologías de contribución ====== */
+
+.contribution-technologies {
+    margin-top: auto;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.contribution-technologies-label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+}
+
+.contribution-technologies .technology-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contribution-technologies .technology-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ========= enlaces del proyecto ====== */
+
+.project-detail-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+
+.project-detail-links .btn-portfolio,
+.project-detail-links .btn-portfolio-outline {
+    margin-left: 0;
+}
+
+
+/* ========= responsive ====== */
+
+@media (max-width: 767.98px) {
+
+    .project-detail-section {
+        padding: 4rem 0;
+    }
+
+    .project-detail-header {
+        margin-bottom: 3rem;
+    }
+
+    .project-detail-title {
+        font-size: 2.75rem;
+    }
+
+    .project-detail-description {
+        font-size: 1rem;
+    }
+
+    .project-detail-info {
+        grid-template-columns: 1fr;
+        margin-bottom: 3rem;
+    }
+
+    .project-detail-block {
+        margin-bottom: 2.5rem;
+    }
+
+    .project-detail-links {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 3rem;
+    }
+
+    .project-detail-links .btn-portfolio,
+    .project-detail-links .btn-portfolio-outline {
+        text-align: center;
+    }
+
+}
+
+/* ========= carrusel ====== */
+.ecoscan-carousel-image {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
+.carousel-caption {
+    right: auto;
+    left: 50%;
+    bottom: 1.5rem;
+    transform: translateX(-50%);
+    width: auto;
+    padding: 0.5rem 1rem;
+    background: rgba(99, 83, 142, 0.8);
+    border-radius: 0.5rem;
+}
+
+.carousel-caption h5 {
+    margin: 0;
+    color: var(--color-white);
+    font-size: 0.95rem;
+}
+
+
 /* ========= contacto ====== */
 
 .contact-section {
@@ -582,3 +912,4 @@ body {
     color: var(--color-text-light);
     font-size: 0.85rem;
 }   
+
