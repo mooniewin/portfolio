@@ -1,56 +1,43 @@
 {{-- muestra el pie de página y enlaces principales --}}
-
 <footer class="portfolio-footer">
-
     <div class="container">
-
         <div class="row g-4">
-
             <div class="col-md-8">
-
-                <a
-                    href="{{ url('/') }}"
-                    class="footer-brand"
-                >
+                <a href="{{ url('/') }}" class="footer-brand">
                     moon.dev
                 </a>
 
                 <p>
                     Desarrolladora backend en formación.
                 </p>
-
             </div>
 
             <div class="col-md-4">
-
-                <h3>
-                    Sitemap
-                </h3>
-
+                <h3> Sitemap </h3>
                 <ul class="footer-links">
 
                     <li>
-                        <a href="#inicio">Inicio</a>
+                        <a href="{{ url('/#inicio') }}">Inicio</a>
                     </li>
 
                     <li>
-                        <a href="#experiencia">Experiencia</a>
+                        <a href="{{ url('/#experiencia') }}">Experiencia</a>
                     </li>
 
                     <li>
-                        <a href="#sobre-mi">Sobre mí</a>
+                        <a href="{{ url('/#sobre-mi') }}">Sobre mí</a>
                     </li>
 
                     <li>
-                        <a href="#tecnologias">Tecnologías</a>
+                        <a href="{{ url('/#tecnologias') }}">Tecnologías</a>
                     </li>
 
                     <li>
-                        <a href="#proyectos">Proyectos</a>
+                        <a href="{{ url('/#proyectos') }}">Proyectos</a>
                     </li>
 
                     <li>
-                        <a href="#contacto">Contacto</a>
+                        <a href="{{ url('/#contacto') }}">Contacto</a>
                     </li>
 
                 </ul>

@@ -10,9 +10,9 @@
                 <h2> Proyectos destacados </h2>
             </div>
 
-            <a href="{{ route('projects.index') }}" class="projects-link">
+            {{-- <a href="{{ route('projects.index') }}" class="projects-link">
                 Ver todos los proyectos →
-            </a>
+            </a> --}}
         </div>
 
         <div id="projectsCarousel" class="carousel slide" data-bs-ride="false" >

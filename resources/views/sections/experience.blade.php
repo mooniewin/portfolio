@@ -14,7 +14,7 @@
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
                 <div class="experience-image">
-                    <span>Captura del sistema SaaS</span>
+                    <img src="images/experience/preview.png" alt="Vista previa de la plataforma SaaS">
                 </div>
             </div>
 
@@ -28,9 +28,7 @@
                 </h3>
 
                 <p class="experience-description">
-                    Participé en el desarrollo de una solución SaaS empresarial
-                    para centralizar y sincronizar pedidos provenientes de
-                    múltiples plataformas comerciales.
+                    Desarrollé desde cero una solución SaaS empresarial para centralizar y sincronizar pedidos provenientes de múltiples plataformas comerciales.
                 </p>
 
                 <div class="experience-technologies">

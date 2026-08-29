@@ -23,7 +23,8 @@
                          Correo
                     </a>
 
-                    <a href="https://wa.me/" class="btn-portfolio-outline" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/524772321458?text=Hola%2C%20vi%20tu%20portafolio%20y%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20tu%20trabajo."
+                        class="btn-portfolio-outline" target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-whatsapp ml-2"></i>
                          WhatsApp
                     </a>
@@ -36,6 +37,11 @@
                     <a href="https://www.linkedin.com/in/montserrat-martínez" class="btn-portfolio-outline" target="_blank" rel="noopener noreferrer" >
                         <i class="bi bi-linkedin ml-2"></i>
                          LinkedIn
+                    </a>
+
+                    <a href="{{ asset('documents/cv-backend.pdf') }}" target="_blank" class="btn-portfolio-outline" >
+                        <i class="bi bi-briefcase"></i>
+                        Descargar CV
                     </a>
                 </div>
             </div>
