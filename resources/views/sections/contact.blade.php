@@ -34,7 +34,7 @@
                          GitHub
                     </a>
 
-                    <a href="https://www.linkedin.com/in/montserrat-martínez" class="btn-portfolio-outline" target="_blank" rel="noopener noreferrer" >
+                    <a href="https://www.linkedin.com/in/montserrat-martínez-2a51393b4" class="btn-portfolio-outline" target="_blank" rel="noopener noreferrer" >
                         <i class="bi bi-linkedin ml-2"></i>
                          LinkedIn
                     </a>
